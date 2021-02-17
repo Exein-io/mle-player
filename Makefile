@@ -12,7 +12,7 @@ PROJECT_SOURCES = mle-player.cc
 all: $(PROJECT_BINARY_NAME)
 
 $(PROJECT_BINARY_NAME):	$(PROJECT_SOURCES)
-	$(CXX) -std=c++14 -funwind-tables -I/usr/include/xtensor -I. $(CXXFLAGS) $(PROJECT_SOURCES) -o $(PROJECT_BINARY_NAME) -ltensorflow-lite -lexnl
+	$(CXX) -std=c++14 -funwind-tables $(CXXFLAGS) $(PROJECT_SOURCES) -o $(PROJECT_BINARY_NAME) -ltensorflow-lite -lexnl
 
 
 clean:
